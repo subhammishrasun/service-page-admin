@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Service Page Management</h1>
+    
+    <!-- Service Cards Management -->
+    <section>
+        <h2>Manage Service Cards</h2>
+        <form action="http://localhost:3000/api/service-cards" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Service Name" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="file" name="image" accept="image/*">
+            <input type="url" name="readMoreLink" placeholder="Read More Link" required>
+            <button type="submit">Save Service Card</button>
+        </form>
+    </section>
+    
+    <!-- Highlighted Products Management -->
+    <section>
+        <h2>Manage Highlighted Products</h2>
+        <form action="http://localhost:3000/api/highlighted-products" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Product Name" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="file" name="image" accept="image/*">
+            <input type="url" name="readMoreLink" placeholder="Read More Link" required>
+            <button type="submit">Save Highlighted Product</button>
+        </form>
+    </section>
+
+    <!-- Client Testimonials Management -->
+    <section>
+        <h2>Manage Client Testimonials</h2>
+        <form action="http://localhost:3000/api/client-testimonials" method="POST">
+            <input type="text" name="clientName" placeholder="Client Name" required>
+            <textarea name="testimonialText" placeholder="Testimonial" required></textarea>
+            <input type="text" name="service" placeholder="Service" required>
+            <button type="submit">Save Testimonial</button>
+        </form>
+    </section>
+
+</body>
+</html>
